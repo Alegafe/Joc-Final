@@ -16,7 +16,7 @@ HEIGHT = 600
 WORLD_WIDTH = 2400
 try:
     window = pygame.display.set_mode((WINDOW_WIDTH, HEIGHT))
-    pygame.display.set_caption("Juego de MARAL")
+    pygame.display.set_caption("Creeper's Last Stand")
 except Exception as e:
     print(f"Error al configurar la ventana: {e}")
     exit()
@@ -170,7 +170,6 @@ class Player(pygame.sprite.Sprite):
             self.steve_movimiento_2.fill(BLUE)
             print("Usando superficie azul como respaldo para steve_movimiento_2.png")
 
-        # Cargar imágenes de parado
         try:
             self.steve_parado_1 = pygame.image.load("assets/steve_parado_1.png").convert_alpha()
             print("Cargada steve_parado_1.png correctamente")
@@ -638,7 +637,7 @@ def show_guide():
             if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 return "menu"
 
-# Función de créditos
+# Función de credits
 def show_credits():
     try:
         credits_img = pygame.image.load("assets/Créditospipi.png").convert()
@@ -781,4 +780,4 @@ try:
             if result == "quit":
                 running = False
             elif result == "menu":
-                continue  
+                continue
